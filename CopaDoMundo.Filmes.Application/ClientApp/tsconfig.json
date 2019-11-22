@@ -10,6 +10,9 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es2015",
+	"proxy": "http://proxy.policiamilitar.sp.gov.br:3128",
+    "rejectUnauthorized": false
+}
     "typeRoots": [
       "node_modules/@types"
     ],
