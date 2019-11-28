@@ -1,0 +1,30 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)" onload="populateForm(pd)">
+    <div class="jumbtron">  
+        <h6 class="text-1 text-center">CAMPEONATO DE FILMES</h6>   
+        <h1 class="text-2 text-center">Fase de Seleção</h1>    
+        <h6 class="text-2 text-center">___</h6>   
+        <h5 class="text-3 text-center">Selecione  filmes que você deseja que entram na competição e depois pressione o <br>botão Gerar Meu Campeonato para prosseguir</h5>                   
+    </div>
+    <button class="button_gerar">GERAR MEU CAMPEONATO</button>
+</form>
+<div class="list_filmes">
+        <div class="list_filmes_selected">
+            <span>Selecionados</span>
+            <span>{{selectedRow}} de 8 filmes</span>
+        </div>
+        <div class="row">
+            <table class="table table-hover"  ng-table="tableParams">               
+                    <tr>
+                        <td *ngFor="let pd of service.list;">
+                            <div class="custom-control custom-checkbox ">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck_{{pd.id}}" (click)="setClickedRow(pd,$event)" >
+                                    <label class="custom-control-label" for="customCheck_{{pd.id}}">
+                                        <span>{{pd.titulo}}</span>
+                                        <span>{{pd.ano}}</span>
+                                    </label>
+                            </div>
+                        </td>
+                    </tr>             
+            </table>
+        </div>        
+</div>

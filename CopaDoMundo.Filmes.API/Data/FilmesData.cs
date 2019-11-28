@@ -19,11 +19,11 @@ namespace CopaDoMundo.Filmes.API.Data
             Configuration = configuration;
         }
 
-        public List<Filme> BuscarFilmes()
+        public List<Copafilmes> BuscarFilmes()
         {
             HttpClient client = new HttpClient();
             var result = client.GetStringAsync(Configuration.GetSection("CopaFilmesApi").Value).Result;
-            return JsonConvert.DeserializeObject<List<Filme>>(result);
+            return JsonConvert.DeserializeObject<List<Copafilmes>>(result);
         }
     }
 }

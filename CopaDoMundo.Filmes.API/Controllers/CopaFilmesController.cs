@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 namespace CopaDoMundo.Filmes.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CopaFilmesController : ControllerBase
     {
 
@@ -23,7 +23,7 @@ namespace CopaDoMundo.Filmes.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Filme>> BuscaCopaFilmes()
+        public ActionResult<IEnumerable<Copafilmes>> BuscaCopaFilmes()
         {
             try
             {

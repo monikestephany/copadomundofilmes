@@ -1,0 +1,24 @@
+
+    <div class="jumbtron">  
+        <h6 class="text-1 text-center">CAMPEONATO DE FILMES</h6>   
+        <h1 class="text-2 text-center">Resultado Final</h1>    
+        <h6 class="text-2 text-center">___</h6>   
+        <h5 class="text-3 text-center">Veja o resultado de filmes de forma simples e rápida</h5>                   
+    </div>  
+  
+    <div class="listfilmesfinal">   
+            <table class="table table-hover"  ng-table="tableParams" onload="populateFormFinal(pd)">                
+                <tr *ngFor="let pd of service.list;">
+                    <td>
+                        <span class="num">{{1}}º</span>
+                    </td>  
+                    <td>  
+                        <div class="form_final">
+                            <label>{{pd.titulo}}</label>     
+                        </div>
+                    </td>
+                </tr> 
+        </table>
+    </div>      
+
+

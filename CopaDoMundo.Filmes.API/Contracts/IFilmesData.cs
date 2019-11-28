@@ -8,6 +8,6 @@ namespace CopaDoMundo.Filmes.API.Contracts
 {
     public interface IFilmesData
     {
-        List<Filme> BuscarFilmes();
+        List<Copafilmes> BuscarFilmes();
     }
 }
