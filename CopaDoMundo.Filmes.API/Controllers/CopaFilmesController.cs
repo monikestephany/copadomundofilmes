@@ -16,10 +16,12 @@ namespace CopaDoMundo.Filmes.API.Controllers
 
         private readonly ILogger<CopaFilmesController> _logger;
         private readonly IFilmesData _filmesData;
-        public CopaFilmesController(ILogger<CopaFilmesController> logger, IFilmesData filmesData)
+        private readonly ICopaFilmeService _copaFilmeService;
+        public CopaFilmesController(ILogger<CopaFilmesController> logger, IFilmesData filmesData, ICopaFilmeService copaFilmeService)
         {
             _logger = logger;
             _filmesData = filmesData;
+            _copaFilmeService = copaFilmeService;
         }
 
         [HttpGet]
@@ -35,6 +37,20 @@ namespace CopaDoMundo.Filmes.API.Controllers
                 return StatusCode(500);
             }   
           
+        }
+        [HttpPost]
+        public ActionResult<IEnumerable<Copafilmes>> CopaFilmes(IEnumerable<Copafilmes> copafilmes)
+        {
+            try
+            {
+                return Ok(_copaFilmeService.Disputa(copafilmes));
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError("BuscaCopaFilmes", ex);
+                return StatusCode(500);
+            }
+
         }
     }
 }

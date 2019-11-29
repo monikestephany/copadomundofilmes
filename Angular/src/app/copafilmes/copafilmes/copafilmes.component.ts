@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CopafilmesService } from 'src/app/shared/copafilmes.service';
 import { Copafilmes } from 'src/app/shared/copafilmes.model';
-import { NgForm } from '@angular/forms';
-import { debug } from 'util';
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-copafilmes',
@@ -12,14 +10,14 @@ import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 })
 export class CopafilmesComponent implements OnInit {
   selectedRow : Number = 0;
-  list: Array<String> = [];
-  constructor(private service:CopafilmesService) { 
+  list: Array<Copafilmes> = [];
+  constructor(private route:Router,private service:CopafilmesService) { 
 
 }
 
 setClickedRow(pd,event){
  
-    if(this.list.indexOf(pd.id) == -1)
+    if(this.list.indexOf(pd) == -1)
     {
       if(this.list.length > 7)
       {
@@ -27,10 +25,10 @@ setClickedRow(pd,event){
         event.preventDefault();
       }
       else
-        this.list.push(pd.id.toString())
+        this.list.push(pd)
      }
-    else if(this.list.indexOf(pd.id) > -1)   
-      this.list.splice(this.list.indexOf(pd.id), 1);   
+    else if(this.list.indexOf(pd) > -1)   
+      this.list.splice(this.list.indexOf(pd), 1);   
   this.selectedRow = this.list.length;   
 }
   populateForm(pd: Copafilmes[]) {
@@ -39,8 +37,13 @@ setClickedRow(pd,event){
   }
   
   ngOnInit() {
+    debugger;
     this.service.refreshList();
     this.populateForm(this.service.list)   
+  }
+  gerarCopaFilmes(){
+    debugger; 
+    this.route.navigate(['/copafilmesfinal']);
   }
 
 }

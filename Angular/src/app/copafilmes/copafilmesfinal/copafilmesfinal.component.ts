@@ -8,21 +8,13 @@ import { CopafilmesService } from 'src/app/shared/copafilmes.service';
   styles: []
 })
 export class CopafilmesfinalComponent implements OnInit {
-  copa: Copafilmes;
-  copa2: Copafilmes;
-  listTest: Copafilmes[];
   constructor(private service:CopafilmesService) {
-    
+  
   }
 
   ngOnInit() {
     debugger;
-    this.listTest = [];
-    this.copa = { Titulo : "Teste 1"} as Copafilmes;
-    this.copa2 = { Titulo : "Teste 2"} as Copafilmes;
-    this.listTest.push(this.copa);
-    this.listTest.push(this.copa2);
-    this.populateForm(this.listTest) 
+    this.populateForm(this.service.list) 
   }
   populateForm(pd: Copafilmes[]) {
     debugger;

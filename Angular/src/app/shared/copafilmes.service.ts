@@ -8,13 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class CopafilmesService {
  formData:Copafilmes[]
+ formDataFinal:Copafilmes[]
  readonly rootURL = 'http://localhost:4000/api';
  list : Copafilmes[];
+ listFinal : Copafilmes[];
   constructor(private http: HttpClient) { }
 
   refreshList(){
-    debugger;
     this.http.get(this.rootURL + '/CopaFilmes')
+    .toPromise()
+    .then(res => this.list = res as Copafilmes[]);
+  }
+   postCopaFilmes(copaFilmes : Copafilmes []){
+    debugger;
+    this.http.post<Copafilmes []>(this.rootURL + '/CopaFilmes',copaFilmes)
     .toPromise()
     .then(res => this.list = res as Copafilmes[]);
   }

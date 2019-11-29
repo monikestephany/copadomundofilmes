@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CopaDoMundo.Filmes.API.Contracts;
 using CopaDoMundo.Filmes.API.Data;
+using CopaDoMundo.Filmes.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +33,8 @@ namespace CopaDoMundo.Filmes.API
             services.AddCors();
             services.AddControllers();
             services.AddScoped<IFilmesData, FilmesData>();
+            services.AddScoped<IVerificacaoNotaService, VerificacaoNotaService>();
+            services.AddScoped<ICopaFilmeService, CopaFilmeService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Copa do Mundo de Filmes", Version = "v1" });
