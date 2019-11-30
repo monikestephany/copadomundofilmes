@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { CopafilmesService } from 'src/app/shared/copafilmes.service';
 import { Copafilmes } from 'src/app/shared/copafilmes.model';
 import {  Router } from '@angular/router';
@@ -43,6 +43,7 @@ setClickedRow(pd,event){
   }
   gerarCopaFilmes(){
     debugger; 
+    this.service.postCopaFilmes(this.list);
     this.route.navigate(['/copafilmesfinal']);
   }
 

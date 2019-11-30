@@ -9,7 +9,16 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'copafilmes', component: CopafilmesComponent },
-  { path: 'copafilmesfinal', component: CopafilmesfinalComponent }
+  { path: 'copafilmesfinal',      component: CopafilmesfinalComponent },
+  {
+    path: 'copafilmesfinal',
+    component: CopafilmesfinalComponent,
+    data: { title: 'Copa Filmes' }
+  },
+  { path: '',
+    redirectTo: '/copafilmes',
+    pathMatch: 'full'
+  }
 ];
 @NgModule({
   declarations: [
@@ -24,7 +33,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes // <-- debugging purposes only)
     )
   ],
-  exports: [RouterModule],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],

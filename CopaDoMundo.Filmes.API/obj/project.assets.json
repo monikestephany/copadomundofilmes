@@ -3336,37 +3336,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\39124368865\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\monike\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\39124368865\\source\\repos\\CopaDoMundo.Filmes\\CopaDoMundo.Filmes.API\\CopaDoMundo.Filmes.API.csproj",
+      "projectUniqueName": "C:\\CopaDoMundo\\copadomundofilmes\\CopaDoMundo.Filmes.API\\CopaDoMundo.Filmes.API.csproj",
       "projectName": "CopaDoMundo.Filmes.API",
-      "projectPath": "C:\\Users\\39124368865\\source\\repos\\CopaDoMundo.Filmes\\CopaDoMundo.Filmes.API\\CopaDoMundo.Filmes.API.csproj",
-      "packagesPath": "C:\\Users\\39124368865\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\39124368865\\source\\repos\\CopaDoMundo.Filmes\\CopaDoMundo.Filmes.API\\obj\\",
+      "projectPath": "C:\\CopaDoMundo\\copadomundofilmes\\CopaDoMundo.Filmes.API\\CopaDoMundo.Filmes.API.csproj",
+      "packagesPath": "C:\\Users\\monike\\.nuget\\packages\\",
+      "outputPath": "C:\\CopaDoMundo\\copadomundofilmes\\CopaDoMundo.Filmes.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\39124368865\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\monike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://tfspacotes.policiamilitar.sp.gov.br/pmesp.nuget/nuget": {},
-        "http://vmwwscdes01.cmdo.policiamilitar.sp.gov.br/Pmesp.NuGet/nuget": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nugetized.blob.core.windows.net/live-reload/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.0": {
